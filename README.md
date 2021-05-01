@@ -1,3 +1,12 @@
+Dynamic Search Page
+ESLINT
+Statically generated product page
+Header/Footer
+SASS/Styled Components
+Sagas
+Typescript
+Redux
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
