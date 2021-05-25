@@ -28,8 +28,8 @@ module.exports = {
     "plugin:prettier/recommended", // Make this the last element so prettier config overrides other formatting rules
   ],
   rules: {
-    "prettier/prettier": ["error", {}, { usePrettierrc: true }],
-    "react/prop-types": [2, { skipUndeclared: true }], // Can be update if using Typescript or PropTypes
+    "prettier/prettier": ["error"],
+    "react/prop-types": [2, { skipUndeclared: true }], // Can be updated if using Typescript or PropTypes
     "react/react-in-jsx-scope": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
