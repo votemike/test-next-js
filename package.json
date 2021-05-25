@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test:bundle": "max=65.0 size=`yarn build | grep \"First Load JS\" | grep -Eo '[0-9.]+'`; if (( $(echo \"$size > $max\" |bc -l) )); then echo \"Bundle is too big\"; exit 1; fi"
   },
   "dependencies": {
     "next": "10.2.0",
