@@ -21,45 +21,45 @@
 /*}*/
 
 .headerStyles {
-    display: flex;
-    padding-top: 8px;
-    padding-bottom: 8px;
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .menuToggle {
-    display: block;
-    /*position: relative;*/
-    /*top: 50px;*/
-    /*left: 50px;*/
+  display: block;
+  /*position: relative;*/
+  /*top: 50px;*/
+  /*left: 50px;*/
 
-    z-index: 1;
+  z-index: 1;
 
-    -webkit-user-select: none;
-    user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 @media (min-width: 1200px) {
-    .menuToggle {
-        display: none;
-    }
+  .menuToggle {
+    display: none;
+  }
 }
 
 .menuToggle a {
-    text-decoration: none;
-    color: #232323;
+  text-decoration: none;
+  color: #232323;
 
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .menuToggle a:hover {
-    color: tomato;
+  color: tomato;
 }
 
 .michael {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 /*
@@ -67,50 +67,49 @@
  * at the top left of the screen
  */
 .mainMenu {
-    display: flex;
-    width: 100%;
-    /*margin: -100px 0 0 -50px;*/
-    padding: 50px;
-    padding-top: 125px;
+  display: flex;
+  width: 100%;
+  /*margin: -100px 0 0 -50px;*/
+  padding: 50px;
+  padding-top: 125px;
 
-    background: #ededed;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
 
-    right: -100%;
-    transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-    position: fixed;
+  right: -100%;
+  transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  position: fixed;
 }
 
 @media (min-width: 1200px) {
-    .mainMenu {
-        position: static;
-        padding: 0;
-        right: unset;
-        display: flex;
-        background-color: transparent;
-    }
+  .mainMenu {
+    position: static;
+    padding: 0;
+    right: unset;
+    display: flex;
+    background-color: transparent;
+  }
 
-    .mainMenu ul {
-        display: flex;
-        flex-direction: row;
-    }
+  .mainMenu ul {
+    display: flex;
+    flex-direction: row;
+  }
 
-    .mainMenu li {
-        list-style: none;
-    }
+  .mainMenu li {
+    list-style: none;
+  }
 }
 
 .mainMenu li {
-    padding: 10px 0;
-    font-size: 22px;
+  padding: 10px 0;
+  font-size: 22px;
 }
 
 /*
  * And let's slide it in from the left
  */
 .navIsOpen {
-    right: 0;
-
+  right: 0;
 }
