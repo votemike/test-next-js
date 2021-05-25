@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import styles from "./styles/Header.module.css";
+import styles from "../../styles/Header.module.css";
 import BurgerMenu from "../atoms/burgerMenu";
 
 // Make a mobile first menu with search bar, and accessible
 // https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793
 // https://codepen.io/erikterwan/pen/EVzeRP
 
-function Header(props) {
+function Header() {
   const [navIsOpen, setNavIsOpen] = useState(false);
 
   // @TODO Switch out for :target pseudo-class https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793
@@ -26,14 +26,15 @@ function Header(props) {
               />
             </a>
           </Link>
-          <a
+          <button
+            type="button"
             className={styles.menuToggle}
             onClick={() => {
               setNavIsOpen(!navIsOpen);
             }}
           >
             <BurgerMenu showCloseIcon={navIsOpen} />
-          </a>
+          </button>
         </div>
         <nav
           id="main-menu"
@@ -41,18 +42,18 @@ function Header(props) {
           role="navigation"
         >
           <ul className={styles.menu}>
-            <a href="#">
-              <li>Home</li>
-            </a>
-            <a href="#">
-              <li>About</li>
-            </a>
-            <a href="#">
-              <li>Info</li>
-            </a>
-            <a href="#">
-              <li>Contact</li>
-            </a>
+            {/* <a href="#"> */}
+            {/*  <li>Home</li> */}
+            {/* </a> */}
+            {/* <a href="#"> */}
+            {/*  <li>About</li> */}
+            {/* </a> */}
+            {/* <a href="#"> */}
+            {/*  <li>Info</li> */}
+            {/* </a> */}
+            {/* <a href="#"> */}
+            {/*  <li>Contact</li> */}
+            {/* </a> */}
             <a href="https://erikterwan.com/" target="_blank" rel="noreferrer">
               <li>Show me more</li>
             </a>

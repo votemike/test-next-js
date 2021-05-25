@@ -1,7 +1,7 @@
-import Link from "next/Link";
-import styles from "/styles/Footer.module.css";
+import Link from "next/link";
+import styles from "../../styles/Footer.module.css";
 
-function Footer(props) {
+function Footer() {
   return (
     <footer>
       <div className={`content ${styles.footerLinks}`}>
