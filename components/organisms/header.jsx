@@ -1,8 +1,7 @@
-import Link from 'next/Link';
-import Image from 'next/image'
-import styles from '/styles/Header.module.css'
-import burgerStyles from '/styles/BurgerMenu.module.css'
-import {useState} from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import styles from "./styles/Header.module.css";
 import BurgerMenu from "../atoms/burgerMenu";
 
 // Make a mobile first menu with search bar, and accessible
@@ -13,30 +12,56 @@ function Header(props) {
   const [navIsOpen, setNavIsOpen] = useState(false);
 
   // @TODO Switch out for :target pseudo-class https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793
-  return <header>
-    <div className={`content ${styles.headerStyles}`}>
-      <div className={styles.michael}>
-        <Link href="/" className={styles.headerImage} >
-         <a style={{width: '200px', height: '100px'}}>
-           <Image src='https://deelay.me/2000/https://picsum.photos/400/200' alt="Logo" width={200} height={100}/>
-         </a>
-       </Link>
-        <a className={styles.menuToggle} onClick={() => {setNavIsOpen(!navIsOpen)}}>
-          <BurgerMenu showCloseIcon={navIsOpen}/>
-        </a>
+  return (
+    <header>
+      <div className={`content ${styles.headerStyles}`}>
+        <div className={styles.michael}>
+          <Link href="/" className={styles.headerImage}>
+            <a style={{ width: "200px", height: "100px" }}>
+              <Image
+                src="https://deelay.me/2000/https://picsum.photos/400/200"
+                alt="Logo"
+                width={200}
+                height={100}
+              />
+            </a>
+          </Link>
+          <a
+            className={styles.menuToggle}
+            onClick={() => {
+              setNavIsOpen(!navIsOpen);
+            }}
+          >
+            <BurgerMenu showCloseIcon={navIsOpen} />
+          </a>
+        </div>
+        <nav
+          id="main-menu"
+          className={`${styles.mainMenu} ${navIsOpen ? styles.navIsOpen : ""}`}
+          role="navigation"
+        >
+          <ul className={styles.menu}>
+            <a href="#">
+              <li>Home</li>
+            </a>
+            <a href="#">
+              <li>About</li>
+            </a>
+            <a href="#">
+              <li>Info</li>
+            </a>
+            <a href="#">
+              <li>Contact</li>
+            </a>
+            <a href="https://erikterwan.com/" target="_blank" rel="noreferrer">
+              <li>Show me more</li>
+            </a>
+          </ul>
+        </nav>
+        {/* <a href="#main-menu-toggle" className="backdrop" hidden></a> */}
       </div>
-      <nav id="main-menu" className={`${styles.mainMenu} ${navIsOpen ? styles.navIsOpen : ""}`} role="navigation">
-        <ul className={styles.menu}>
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>About</li></a>
-          <a href="#"><li>Info</li></a>
-          <a href="#"><li>Contact</li></a>
-          <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-        </ul>
-      </nav>
-      {/*<a href="#main-menu-toggle" className="backdrop" hidden></a>*/}
-    </div>
-  </header>;
+    </header>
+  );
   // return <header>
   //   <a href="#main-menu"
   //      id="main-menu-toggle"
@@ -92,4 +117,5 @@ function Header(props) {
   //   </div>
   // </header>;
 }
+
 export default Header;

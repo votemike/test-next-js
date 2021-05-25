@@ -1,3 +1,3 @@
 export default function Mike() {
-  return (<p>Mike</p>);
+  return <p>Mike</p>;
 }

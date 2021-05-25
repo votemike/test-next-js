@@ -26,8 +26,7 @@
     padding-bottom: 8px;
 }
 
-.menuToggle
-{
+.menuToggle {
     display: block;
     /*position: relative;*/
     /*top: 50px;*/
@@ -45,16 +44,14 @@
     }
 }
 
-.menuToggle a
-{
+.menuToggle a {
     text-decoration: none;
     color: #232323;
 
     transition: color 0.3s ease;
 }
 
-.menuToggle a:hover
-{
+.menuToggle a:hover {
     color: tomato;
 }
 
@@ -69,8 +66,7 @@
  * Make this absolute positioned
  * at the top left of the screen
  */
-.mainMenu
-{
+.mainMenu {
     display: flex;
     width: 100%;
     /*margin: -100px 0 0 -50px;*/
@@ -83,7 +79,7 @@
     /* to stop flickering of text in safari */
 
     right: -100%;
-    transition: right 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     position: fixed;
 }
 
@@ -106,8 +102,7 @@
     }
 }
 
-.mainMenu li
-{
+.mainMenu li {
     padding: 10px 0;
     font-size: 22px;
 }
