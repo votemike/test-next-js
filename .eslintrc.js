@@ -17,6 +17,7 @@ module.exports = {
     browser: true,
     amd: true,
     node: true,
+    jest: true,
   },
   extends: [
     "eslint:recommended",
@@ -31,6 +32,10 @@ module.exports = {
     "prettier/prettier": ["error"],
     "react/prop-types": [2, { skipUndeclared: true }], // Can be updated if using Typescript or PropTypes
     "react/react-in-jsx-scope": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      { devDependencies: ["setupTests.js", "**/*.test.{js,jsx}"] },
+    ],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
