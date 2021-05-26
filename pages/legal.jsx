@@ -7,7 +7,9 @@ function Legal() {
         <title>Legal</title>
         <meta property="og:title" content="Legal" key="title" />
       </Head>
-      <h1>Legal</h1>
+      <div className="content">
+        <h1>Legal</h1>
+      </div>
     </>
   );
 }

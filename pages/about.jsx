@@ -7,7 +7,9 @@ function About() {
         <title>About</title>
         <meta property="og:title" content="About" key="title" />
       </Head>
-      <h1>About</h1>
+      <div className="content">
+        <h1>About</h1>
+      </div>
     </>
   );
 }

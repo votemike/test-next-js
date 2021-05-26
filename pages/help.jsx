@@ -7,7 +7,9 @@ function Help() {
         <title>Help</title>
         <meta property="og:title" content="Help" key="title" />
       </Head>
-      <h1>Help</h1>
+      <div className="content">
+        <h1>Help</h1>
+      </div>
     </>
   );
 }
