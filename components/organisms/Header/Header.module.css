@@ -1,0 +1,8 @@
+.header {
+  background: #cccccc;
+}
+
+.headerHomeLink {
+  display: inline-block;
+  padding: 30px 0;
+}
