@@ -10,7 +10,7 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:bundle": "max=65.0 size=`yarn build | grep \"First Load JS\" | grep -Eo '[0-9.]+'`; if (( $(echo \"$size > $max\" |bc -l) )); then echo \"First load shared JS is too big\"; exit 1; fi"
+    "test:bundle": "max=66.0 size=`yarn build | grep \"First Load JS\" | grep -Eo '[0-9.]+'`; if (( $(echo \"$size > $max\" |bc -l) )); then echo \"First load shared JS is too big\"; exit 1; fi"
   },
   "dependencies": {
     "next": "10.2.0",
