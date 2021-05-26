@@ -5,7 +5,7 @@
   margin-bottom: 5px;
   position: relative;
 
-  background: #cdcdcd;
+  background: blue;
   border-radius: 3px;
 
   z-index: 1;
@@ -47,4 +47,15 @@
  */
 .opened .burgerSpan:last-child {
   transform: rotate(-45deg) translate(0, -1px);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
