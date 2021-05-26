@@ -1,5 +1,5 @@
 import React from "react";
-import BurgerToggle from "../components/atoms/burgerToggle";
+import BurgerToggle from "./BurgerToggle";
 
 export default {
   title: "Example/BurgerToggle",

@@ -1,4 +1,4 @@
-import styles from "../../styles/BurgerToggle.module.css";
+import styles from "./BurgerToggle.module.css";
 
 function BurgerToggle({ showCloseIcon }) {
   return (
