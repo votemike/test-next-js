@@ -32,3 +32,7 @@ jobs:
         run: yarn test:bundle
       - name: Check unit tests
         run: yarn test
+      - name: Check eslint
+        run: yarn lint
+      - name: Check prettier
+        run: yarn format
