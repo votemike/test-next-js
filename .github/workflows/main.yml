@@ -27,4 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: yarn test:bundle
+        run: |
+          yarn install
+          yarn test:bundle
