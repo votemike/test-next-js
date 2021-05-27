@@ -14,6 +14,8 @@ jobs:
           echo "$GITHUB_CONTEXT"
       - name: Checkout 🛎
         uses: actions/checkout@v2
+      - name: Set up node for global install
+        uses: actions/setup-node@v1
       - name: Install pa11y
         run: npm install -g pa11y
       - name: Run pa11y
