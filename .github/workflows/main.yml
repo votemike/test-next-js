@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run yarn install
+        run: yarn install
+      - name: Check bundle size
+        run: yarn test:bundle
+      - name: Check unit tests
+        run: yarn test
+      - name: Check eslint
+        run: yarn lint
+      - name: Check prettier
+        run: yarn format
