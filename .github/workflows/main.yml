@@ -33,6 +33,6 @@ jobs:
       - name: Check unit tests
         run: yarn test
       - name: Check eslint
-        run: yarn lint
+        run: yarn lints
       - name: Check prettier
         run: yarn format
