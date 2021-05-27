@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./Header.module.css";
-import BurgerMenu from "../../atoms/burgerMenu";
+import BurgerToggle from "../../atoms/BurgerToggle/BurgerToggle";
 
 function Header() {
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -29,7 +29,7 @@ function Header() {
               setNavIsOpen(!navIsOpen);
             }}
           >
-            <BurgerMenu showCloseIcon={navIsOpen} />
+            <BurgerToggle showCloseIcon={navIsOpen} />
           </button>
         </div>
         <nav

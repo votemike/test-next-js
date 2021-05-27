@@ -1,6 +1,6 @@
-import styles from "../../styles/BurgerMenu.module.css";
+import styles from "./BurgerToggle.module.css";
 
-function BurgerMenu({ showCloseIcon }) {
+function BurgerToggle({ showCloseIcon }) {
   return (
     <div className={`${showCloseIcon ? styles.opened : ""}`}>
       <span className={styles.srOnly}>Open main menu</span>
@@ -11,4 +11,4 @@ function BurgerMenu({ showCloseIcon }) {
   );
 }
 
-export default BurgerMenu;
+export default BurgerToggle;
