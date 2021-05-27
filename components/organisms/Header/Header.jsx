@@ -5,10 +5,10 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className="content">
-         <Link href="/">
+        <Link href="/">
           <a className={styles.headerHomeLink}>Company Name</a>
         </Link>
- </div>
+      </div>
     </header>
   );
 }
