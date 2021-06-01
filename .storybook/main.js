@@ -8,4 +8,12 @@ module.exports = {
     "@storybook/addon-links",
   ],
   presets: [path.resolve(__dirname, "./next-preset.js")],
+  webpackFinal: async (config, { configType }) => {
+    config.output.publicPath = "/styleguide/";
+    return config;
+  },
+  managerWebpack: async (config) => {
+    config.output.publicPath = "/styleguide/";
+    return config;
+  },
 };

@@ -14,10 +14,10 @@
     "test:watch": "jest --watch",
     "test:bundle": "max=66.0 size=`yarn build | grep \"First Load JS\" | grep -Eo '[0-9.]+'`; if (( $(echo \"$size > $max\" |bc -l) )); then echo \"First load shared JS is too big\"; exit 1; fi",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o public/styleguide --preview-url=/styleguide/iframe.html"
   },
   "dependencies": {
-    "next": "10.2.0",
+    "next": "10.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
@@ -30,8 +30,8 @@
     "@storybook/react": "^6.2.9",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
-    "babel-loader": "^8.2.2",
     "babel-jest": "^27.0.1",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
     "eslint": "^7.27.0",
     "eslint-config-airbnb": "^18.2.1",

@@ -15,6 +15,7 @@
 # production
 /build
 /storybook-static
+/public/styleguide/
 
 # misc
 .DS_Store
