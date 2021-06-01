@@ -14,7 +14,7 @@
     "test:watch": "jest --watch",
     "test:bundle": "max=66.0 size=`yarn build | grep \"First Load JS\" | grep -Eo '[0-9.]+'`; if (( $(echo \"$size > $max\" |bc -l) )); then echo \"First load shared JS is too big\"; exit 1; fi",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o public/styleguide --preview-url=/styleguide/iframe.html"
+    "build-storybook": "build-storybook -o public/styleguide --preview-url=/styleguide/iframe.html --force-build-preview"
   },
   "dependencies": {
     "next": "10.2.3",
@@ -27,7 +27,7 @@
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
-    "@storybook/react": "^6.2.9",
+    "@storybook/react": "6.3.0-beta.7",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "babel-jest": "^27.0.1",
