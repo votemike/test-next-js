@@ -15,7 +15,7 @@
     "test:bundle": "max=71.0 size=`yarn build | grep \"First Load JS\" | grep -Eo '[0-9.]+'`; if (( $(echo \"$size > $max\" |bc -l) )); then echo \"First load shared JS is too big\"; exit 1; fi"
   },
   "dependencies": {
-    "next": "10.2.0",
+    "next": "^11.0.2-canary.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
@@ -25,6 +25,7 @@
     "babel-jest": "^27.0.1",
     "eslint": "^7.27.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.3",
     "eslint-plugin-jsx-a11y": "^6.4.1",
