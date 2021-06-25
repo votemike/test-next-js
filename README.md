@@ -1,3 +1,8 @@
+[https://nextjs.org/docs/deployment#docker-image](NextJS Docker (Start only))
+[https://github.com/vercel/next.js/tree/canary/examples/with-docker](NextJS Example (Start only))
+[https://github.com/kachar/yadi/tree/main/web/next.js](Kachar example (Start only))
+[https://github.com/vercel/next.js/discussions/16995](Kachar Discussion)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

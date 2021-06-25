@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  app:
+    image: test-nest-js:latest
+    container_name: test-next-js-app
+    restart: always
+
+    environment:
+      APP_ENV: ${APP_ENV?}
+      APP_URL: ${APP_URL?}
+
+    networks:
+      - net-frontend
+
+networks:
+  net-frontend:
+    driver: bridge
