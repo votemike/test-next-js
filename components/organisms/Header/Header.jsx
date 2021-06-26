@@ -12,7 +12,7 @@ function Header() {
       <div className={`content ${styles.headerInner}`}>
         <div className={styles.logoAndBurger}>
           <Link href="/">
-            <a style={{ width: "200px", height: "100px" }}>
+            <a className={styles.headerImageLink}>
               <Image
                 src="https://deelay.me/2000/https://picsum.photos/400/200"
                 alt="Logo"

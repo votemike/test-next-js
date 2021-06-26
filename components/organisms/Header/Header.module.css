@@ -8,6 +8,11 @@
   padding-bottom: 8px;
 }
 
+.headerImageLink {
+  height: 100px;
+  width: 200px;
+}
+
 .logoAndBurger {
   display: flex;
   justify-content: space-between;

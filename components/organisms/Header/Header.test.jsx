@@ -15,12 +15,14 @@ describe("Header", () => {
 
   test("clicking the menu opens the menu and click again closes it", async () => {
     render(<Header />);
+
     const initialOpenButton = screen.getByLabelText("Open main menu");
     fireEvent.click(initialOpenButton);
     const closeButton = await screen.getByLabelText("Close main menu");
     const afterFirstClickOpenButton = screen.queryByLabelText("Open main menu");
     expect(closeButton).toBeTruthy();
     expect(afterFirstClickOpenButton).toBeFalsy();
+
     fireEvent.click(closeButton);
     const finalOpenButton = await screen.getByLabelText("Open main menu");
     const finalCloseButton = screen.queryByLabelText("Close main menu");
