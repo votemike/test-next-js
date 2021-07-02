@@ -5,6 +5,10 @@ module.exports = {
         source: "/styleguide",
         destination: "/styleguide/index.html",
       },
+      {
+        source: "/iframe.html",
+        destination: "/styleguide/iframe.html",
+      },
     ];
   },
 };
