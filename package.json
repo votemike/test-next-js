@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn build storybook && next build",
+    "build": "yarn build-storybook && next build",
     "start": "next start",
     "lint": "eslint --ext js,jsx . --ignore-path ./.gitignore",
     "lint:fix": "eslint --fix --ext js,jsx . --ignore-path ./.gitignore",
