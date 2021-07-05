@@ -21,7 +21,7 @@ jobs:
       - name: Check bundle size
         run: yarn test:bundle
       - name: Check unit tests
-        run: yarn test --converage
+        run: yarn test --coverage
       - name: Check eslint
         run: yarn lint
       - name: Check prettier
