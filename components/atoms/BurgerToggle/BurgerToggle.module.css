@@ -1,0 +1,50 @@
+.burgerSpan {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.burgerSpan:nth-child(2) {
+  transform-origin: 4px 0;
+}
+
+.burgerSpan:last-child {
+  transform-origin: 0 100%;
+}
+
+.opened .burgerSpan {
+  background: #232323;
+}
+
+.opened .burgerSpan:nth-child(2) {
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+.opened .burgerSpan:nth-child(3) {
+  opacity: 0;
+  transform: scale(0.2, 0.2);
+}
+
+.opened .burgerSpan:last-child {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

@@ -13,7 +13,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## yarn commands
 
 - dev - run the Next.js app locally on http://localhost:3000. Client side changes hot-reload
-- build - build the Next.js app ready for deployment
+- build - build styleguide (available at /styleguide) and the Next.js app ready for deployment
 - start - run a built version of the Next.js app (no hot-reloading)
 - lint - run eslint checks
 - lint:fix - fix eslint problems
@@ -22,6 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - test - run unit tests once
 - test:watch - run tests when test or tested code has changed
 - test:bundle - run to ensure bundle size is at accepted level (increase size when appropriate)
+- storybook - start Storybook ready for local development on http://localhost:6006/ . Changes will hot-reload
 
 ## GitHub
 
