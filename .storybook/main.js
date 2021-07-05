@@ -9,11 +9,15 @@ module.exports = {
   ],
   presets: [path.resolve(__dirname, "./next-preset.js")],
   webpackFinal: async (config, { configType }) => {
-    config.output.publicPath = "/styleguide/";
+    if (configType === "PRODUCTION") {
+      config.output.publicPath = "/styleguide/";
+    }
     return config;
   },
-  managerWebpack: async (config) => {
-    config.output.publicPath = "/styleguide/";
+  managerWebpack: async (config, { configType }) => {
+    if (configType === "PRODUCTION") {
+      config.output.publicPath = "/styleguide/";
+    }
     return config;
   },
 };
