@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -12,23 +10,25 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.jsx`. The page auto-updates as you edit the file.
+## yarn commands
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- dev - run the Next.js app locally on http://localhost:3000. Client side changes hot-reload
+- build - build styleguide (available at /styleguide) and the Next.js app ready for deployment
+- start - run a built version of the Next.js app (no hot-reloading)
+- lint - run eslint checks
+- lint:fix - fix eslint problems
+- format - run prettier checks
+- format:fix - fix prettier problems
+- test - run unit tests once
+- test:watch - run tests when test or tested code has changed
+- test:bundle - run to ensure bundle size is at accepted level (increase size when appropriate)
+- storybook - start Storybook ready for local development on http://localhost:6006/ . Changes will hot-reload
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## GitHub
 
-## Learn More
+Workflows are set up for GitHub actions to ensure bundle size is acceptable,test and linting pass.
+If deployment is set up, GitHub actions run pa11y accessibility checks on deployed URL.
 
-To learn more about Next.js, take a look at the following resources:
+## Component philosophy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The component structure follows atomic principles.
