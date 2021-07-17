@@ -15,6 +15,6 @@ module.exports = {
     webpack5: true,
   },
   images: {
-    domains: ['deelay.me'],
+    domains: ["deelay.me"],
   },
 };
