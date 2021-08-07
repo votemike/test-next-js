@@ -15,6 +15,10 @@ module.exports = {
     webpack5: true,
   },
   images: {
-    domains: ["deelay.me"],
+    domains: ["deelay.me", "raw.githubusercontent.com"],
+  },
+  env: {
+    slowApi: false,
+    slowImages: false,
   },
 };

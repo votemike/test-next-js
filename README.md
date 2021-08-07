@@ -1,12 +1,12 @@
-## Getting Started
 Dynamic Search Page
-ESLINT
 Statically generated product page
 Header/Footer
 SASS/Styled Components
 Sagas
 Typescript
 Redux
+
+## Getting Started
 
 First, run the development server:
 
