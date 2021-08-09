@@ -6,6 +6,10 @@ Sagas
 Typescript
 Redux
 
+Fetch or SWR?
+If SWR, Error states for everything
+Finish off proper loading states
+
 ## Getting Started
 
 First, run the development server:

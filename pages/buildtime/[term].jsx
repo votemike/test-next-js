@@ -43,7 +43,7 @@ export async function getStaticProps(context) {
 }
 
 const SearchPage = ({ data, error }) => {
-  const imageUrl = process.env.slowApi
+  const imageUrl = process.env.slowImages
     ? `https://deelay.me/2000/${data.sprites.front_default}`
     : data.sprites.front_default;
   return (

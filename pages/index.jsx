@@ -23,36 +23,40 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link href="/search/mike">
-            <a>Mike Search</a>
-          </Link>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
+          <div className={styles.card}>
+            <a href="/buildtime">
+              <h2>Build Time &rarr;</h2>
+            </a>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Index and Items pages built at build time. If they weren't built
+              then 404.
             </p>
-          </a>
+          </div>
+
+          <div className={styles.card}>
+            <a href="/buildcommonwithrevalidate">
+              <h2>Build Time (Build Common & Revalidate) &rarr;</h2>
+            </a>
+            <p>
+              Index and commonly used Items pages built at build time. If they
+              weren&apos;t built generate live and save. Revalidate every 60
+              minutes.
+            </p>
+          </div>
+
+          <div className={styles.card}>
+            <a href="/clientside">
+              <h2>Client Side &rarr;</h2>
+            </a>
+            <p>Generate Index and Item pages client side</p>
+          </div>
+
+          <div className={styles.card}>
+            <a href="/serverside">
+              <h2>Server Side &rarr;</h2>
+            </a>
+            <p>Generate Index and Item pages server side</p>
+          </div>
         </div>
       </main>
 

@@ -3,8 +3,8 @@
   padding: 0;
 }
 
-.listLink:active,
-.listLink:focus,
-.listLink:hover {
-  background-color: #cccccc;
+.listLink a:active,
+.listLink a:focus,
+.listLink a:hover {
+  text-decoration: underline;
 }

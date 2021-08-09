@@ -19,6 +19,6 @@ module.exports = {
   },
   env: {
     slowApi: false,
-    slowImages: false,
+    slowImages: true,
   },
 };
