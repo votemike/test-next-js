@@ -37,7 +37,7 @@ const IndexPage = () => {
     <div>
       <p>A search index page built on the client at request time.</p>
       {results ? (
-        <SearchResultList results={results} urlPrefix="/serverside" />
+        <SearchResultList results={results} urlPrefix="/clientside" />
       ) : (
         <div>No Results Found</div>
       )}

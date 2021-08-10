@@ -16,12 +16,23 @@ const SearchPage = () => {
     fetch(fullUrl).then((res) => res.json())
   );
 
+  if (error) {
+    return <div>failed to load</div>;
+  }
+  if (!data) {
+    return <div>loading...</div>;
+  }
+
+  if (!data.results.length > 0) {
+    return <p>No results: Try a different search</p>;
+  }
+
   const imageUrl = process.env.slowImages
     ? `https://deelay.me/2000/${data.sprites.front_default}`
     : data.sprites.front_default;
   return (
     <div>
-      <Link href="/serverside">&lt; Back to Search Results</Link>
+      <Link href="/clientside">&lt; Back to Search Results</Link>
       <p>An item page built on the client at request time.</p>
       <div>
         <Image
