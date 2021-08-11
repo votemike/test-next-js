@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import useSWR from "swr";
 import { useRouter } from "next/router";
+import Error from "next/error";
 
 const SearchPage = () => {
   const router = useRouter();
@@ -12,19 +13,14 @@ const SearchPage = () => {
 
   const slowUrlPrefix = process.env.slowApi ? "https://deelay.me/2000/" : "";
 
-  const { data, error } = useSWR(`${slowUrlPrefix}${url}`, (fullUrl) =>
-    fetch(fullUrl).then((res) => res.json())
-  );
+  const { data, error } = useSWR(`${slowUrlPrefix}${url}`);
 
   if (error) {
-    return <div>failed to load</div>;
+    console.log(error.status); // Can't 404????
+    return <Error statusCode={error.status} />;
   }
   if (!data) {
     return <div>loading...</div>;
-  }
-
-  if (!data.results.length > 0) {
-    return <p>No results: Try a different search</p>;
   }
 
   const imageUrl = process.env.slowImages

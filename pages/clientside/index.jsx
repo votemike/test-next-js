@@ -7,9 +7,7 @@ const IndexPage = () => {
 
   const slowUrlPrefix = process.env.slowApi ? "https://deelay.me/2000/" : "";
 
-  const { data, error } = useSWR(`${slowUrlPrefix}${url}`, (fullUrl) =>
-    fetch(fullUrl).then((res) => res.json())
-  );
+  const { data, error } = useSWR(`${slowUrlPrefix}${url}`);
 
   if (error) {
     console.log("Failed to Load");
