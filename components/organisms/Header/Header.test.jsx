@@ -29,4 +29,6 @@ describe("Header", () => {
     expect(finalOpenButton).toBeTruthy();
     expect(finalCloseButton).toBeFalsy();
   });
+
+  // @TODO Need to add a test for clicking on the background
 });
