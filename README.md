@@ -2,6 +2,7 @@
 [https://github.com/vercel/next.js/tree/canary/examples/with-docker](NextJS Example (Start only))
 [https://github.com/kachar/yadi/tree/main/web/next.js](Kachar example (Start only))
 [https://github.com/vercel/next.js/discussions/16995](Kachar Discussion)
+Need to find how to hot reload. Currently need to build, then run.
 
 ## Getting Started
 
